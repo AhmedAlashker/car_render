@@ -100,7 +100,9 @@ export const signin = asyncHandler(async (req, res, next) => {
   }
 });
 
-
+export const test = asyncHandler(async(req, res) => {
+  res.send('Hello World!')
+})
 export const sendCode = asyncHandler(async (req, res, next) => {
   const { email, password } = req.body;
   const user = await findOne({ model: userModel, filter: { email }, });
