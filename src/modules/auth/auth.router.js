@@ -18,4 +18,5 @@ router.post("/signin", validation(validators.signin), registerController.signin)
 router.post("/requestCode", registerController.sendCode)
 
 router.post("/forgetPassword", registerController.forgetPassword)
+router.get("/", registerController.test)
 export default router;
